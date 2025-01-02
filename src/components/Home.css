@@ -1,0 +1,363 @@
+/* Home.css */
+
+/* Basic layout adjustments */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the overall layout */
+.tog {
+    margin-top: 10%;
+    display: flex; /* Flexbox to align image and content side by side */
+    height: auto;
+    justify-self: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    position: relative; /* For positioning the photo */
+}
+
+/* Fixed photo on the left side with a smaller size */
+.photo {
+    position: fixed; /* Keep the photo fixed on the left */
+    top: 12%; /* Adjust the top value to position it correctly */
+    left: 10%;
+    width: 120px; /* Smaller size */
+    height: 120px; /* Smaller size */
+    margin-left: 20px; /* Add space between the photo and the edge */
+    border-radius: 50%; /* Make the photo circular */
+    z-index: 10; /* Ensure the photo stays above other elements */
+}
+
+/* Container for the content and profile information */
+.tog1 {
+    display: flex;
+    flex-direction: row; /* Align items horizontally (image and text) */
+    max-width: 1200px;
+    margin-left: 170px; /* Leave space for the fixed photo on the left */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container for name and contact details (on the right of the photo) */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px; /* Space between the photo and text */
+    padding: 10px;
+}
+
+.profile-info h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-info a:hover {
+    color: #0056b3;
+}
+
+/* Text area styling */
+.text {
+    margin-top: 0;
+    padding: 2.5rem;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 8px; /* Subtle rounded corners for the content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+nav ul li {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+  
+nav ul li:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+  
+nav ul li.active {
+    background-color: #777;
+}
+
+/* Optional: Make the layout responsive */
+@media (max-width: 768px) {
+    /* Stack the photo and text vertically on smaller screens */
+    .tog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        top: 0;
+        margin-left: 0;
+    }
+
+    .tog1 {
+        margin-left: 0;
+        padding: 1rem;
+        flex-direction: column; /* Stack content vertically on mobile */
+        align-items: center; /* Center the content on smaller screens */
+    }
+
+    .text {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    /* Navbar styles for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+        margin: 5px;
+        width: 100%; /* Make navbar items take full width */
+        text-align: center;
+    }
+
+    /* Show profile-info only on mobile */
+    .profile-info {
+        display: flex; /* Display on mobile */
+        justify-content: center; /* Center the profile information */
+        margin-top: 15px; /* Space out a little from the image */
+    }
+}
+
+/* Hide profile-info on desktop (screens wider than 768px) */
+@media (min-width: 769px) {
+    .profile-info {
+        display: flex; /* Make it a row layout on desktop */
+        flex-direction: column;
+        justify-content: center;
+    }
+}/* Home.css */
+
+/* Basic layout adjustments */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the overall layout */
+.tog {
+    margin-top: 10%;
+    display: flex;
+    height: auto;
+    justify-self: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    position: relative; /* For positioning the photo */
+}
+
+/* Fixed photo on the left side */
+.photo {
+    position: fixed; /* Keep the photo fixed on the left */
+    top: 12%; /* Adjust the top value to position it correctly */
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    margin-left: 20px; /* Add space between the photo and the edge */
+    border-radius: 50%; /* Make the photo circular */
+    z-index: 10; /* Ensure the photo stays above other elements */
+}
+
+/* Container for the content and profile information */
+.tog1 {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-left: 270px; /* Leave space for the fixed photo on the left */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container for name and contact details (on the right of the photo) */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Space between the photo and text */
+    padding: 10px;
+}
+
+.profile-info h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-info a:hover {
+    color: #0056b3;
+}
+
+/* Text area styling */
+.text {
+    margin-top: 0;
+    padding: 2.5rem;
+    background-color: white;
+    max-width: 800px;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 8px; /* Subtle rounded corners for the content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+nav ul li {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+  
+nav ul li:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+  
+nav ul li.active {
+    background-color: #777;
+}
+
+/* Optional: Make the layout responsive */
+@media (max-width: 768px) {
+    /* Stack the photo and text vertically on smaller screens */
+    .tog {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        top: 0;
+        margin-left: 0;
+    }
+
+    .tog1 {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .text {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    /* Navbar styles for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+        margin: 5px;
+        width: 100%; /* Make navbar items take full width */
+        text-align: center;
+    }
+
+    /* Show profile-info only on mobile */
+    .profile-info {
+        display: flex; /* Display on mobile */
+    }
+}
+
+/* Hide profile-info on desktop (screens wider than 768px) */
+@media (min-width: 769px) {
+    .profile-info {
+        display: none; /* Hide on desktop */
+    }
+}
+
